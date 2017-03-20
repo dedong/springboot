@@ -42,8 +42,8 @@ public class UserController {
 	}
 	
 	@RequestMapping("list/{pageSize}/{rownum}")
-	public List<User> queryByPage(Integer pageSize,Integer rownum){
-		return null;
+	public List<User> queryByPage(@PathVariable Integer pageSize,@PathVariable Integer rownum){
+		return userService.queryListByPage(pageSize, rownum);
 		
 	}
 }
