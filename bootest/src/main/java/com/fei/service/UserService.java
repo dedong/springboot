@@ -16,7 +16,5 @@ public interface UserService {
 	List<User> queryUserByName(String name);
 	
 	List<User> queryAll();
-	
-	
 	List<User> queryListByPage(Integer page,Integer rows);
 }
