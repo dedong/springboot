@@ -41,6 +41,14 @@ public class UserController {
 		return userService.queryAll();
 	}
 	
+	/**
+	 * queryByPage:(). 
+	 * @author fei 
+	 * @Time：2017年3月20日 下午5:56:50
+	 * @param pageSize
+	 * @param rownum
+	 * @return
+	 */
 	@RequestMapping("list/{pageSize}/{rownum}")
 	public List<User> queryByPage(@PathVariable Integer pageSize,@PathVariable Integer rownum){
 		return userService.queryListByPage(pageSize, rownum);
