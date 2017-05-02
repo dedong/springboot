@@ -1,5 +1,7 @@
 package com.fei.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -9,7 +11,7 @@ import javax.persistence.Id;
  * @version 1.0
  */
 @Entity
-public class User {
+public class User implements Serializable{
 	@Id
 	private Long id;
 	private String userName;

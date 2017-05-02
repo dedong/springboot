@@ -55,5 +55,11 @@
 			<version>0.9.1</version>
 		</dependency>
 
+		<!-- 配置使用redis启动器 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-redis</artifactId>
+		</dependency>
+
 	</dependencies>
 </project>
