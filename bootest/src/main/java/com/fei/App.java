@@ -1,10 +1,12 @@
 package com.fei;
 
+import javax.jms.Queue;
+
+import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.context.annotation.Bean;
 
 /**
  * @author fei
@@ -19,4 +21,8 @@ public class App {
 		SpringApplication.run(App.class, args);
 	}
 	
+	@Bean
+	public Queue queue(){
+		return new ActiveMQQueue("fei.queue");
+	}
 }
